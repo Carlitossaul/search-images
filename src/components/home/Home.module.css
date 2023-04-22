@@ -1,0 +1,77 @@
+.container {
+}
+
+.conteinerCard {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  gap: 0.6em;
+}
+
+.divImage {
+  width: 100%;
+  height: 32em;
+  background-image: url("../../helper/Screenshot_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #252525;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.scrollToTopButton:hover {
+  background-color: #555;
+}
+
+@media (max-width: 391px) {
+  .divImage {
+    width: 100%;
+    height: 14.5em;
+    background-image: none;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .conteinerCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    margin-left: 10px;
+    gap: 1px;
+  }
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
+}

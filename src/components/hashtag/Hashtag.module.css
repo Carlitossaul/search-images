@@ -1,0 +1,33 @@
+.tag {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.25em 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+  background-color: #242424be;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.activeTag {
+  background-color: #646cff83;
+}
+
+@media (max-width: 391px) {
+  .tag {
+    margin: 1px;
+  }
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
+}

@@ -1,0 +1,37 @@
+.conteinerCard {
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #252525; */
+}
+.img {
+  width: 100%;
+  max-width: 100%;
+  height: 24em; /* o cualquier altura que desees */
+  object-fit: contain;
+}
+
+@media (max-width: 391px) {
+  .img {
+    width: 95%;
+    max-width: 100%;
+    height: 20em; /* o cualquier altura que desees */
+    object-fit: contain;
+  }
+  .card {
+    width: 95%;
+  }
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
+}

@@ -1,0 +1,127 @@
+.nav {
+  height: 5em;
+  background-color: #041630c5;
+  top: 1em;
+  margin-bottom: 2em;
+  position: fixed;
+  width: 100%;
+  z-index: +1;
+  /* opacity: 0.9; */
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Search {
+  position: relative;
+  left: 5em;
+}
+
+.img {
+  max-width: 100%;
+  height: 4.5em;
+  margin-left: 1em;
+  object-fit: cover;
+}
+.links {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 1em;
+}
+
+.link {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #01d8eb;
+  font-size: 1.7em;
+  transition: all 0.4s;
+}
+
+.link:hover {
+  text-shadow: 1px 1px 3px #ff6347;
+}
+
+.link-active {
+  font-weight: bold;
+  color: #00bfff;
+  text-shadow: 1px 1px 3px green;
+  font-size: 1.7em;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.link-active::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 0.6px;
+  background-color: #fd9502;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 391px) {
+  .nav {
+    height: 6em;
+  }
+  .container {
+    display: flex;
+    font-size: 12px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+    margin-top: 5px;
+  }
+  .conteinerImg {
+    font-size: 8px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+  .Search {
+    position: relative;
+    left: 0em;
+  }
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+  .nav {
+    height: 6em;
+  }
+  .container {
+    display: flex;
+    font-size: 12px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+    margin-top: 5px;
+  }
+  .conteinerImg {
+    font-size: 8px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+  .Search {
+    position: relative;
+    left: 0em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
+}
