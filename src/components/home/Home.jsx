@@ -17,7 +17,6 @@ const Home = () => {
 
   const [showScrollButton, setShowScrollButton] = useState(false);
 
-  // Función que lleva al usuario al inicio de la página
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -25,7 +24,6 @@ const Home = () => {
     });
   };
 
-  // Función para mostrar u ocultar el botón según la posición del usuario en la página
   const handleScroll = () => {
     const scrollPosition = window.pageYOffset;
 
@@ -58,7 +56,7 @@ const Home = () => {
             <Card
               key={photo.id}
               alt={photo.alt_description}
-              photo={photo.urls.regular}
+              photo={photo.urls.small}
               description={photo.description}
             />
           ))}
