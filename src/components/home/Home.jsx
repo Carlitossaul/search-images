@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../card/Card";
 import { useDispatch, useSelector } from "react-redux";
-import { getImages } from "../../redux/actions";
+import { getImages, getSaved } from "../../redux/actions";
 import style from "./Home.module.css";
 import Endpoints from "../endpoints/Enpoints";
 import Hashtag from "../hashtag/Hashtag";
@@ -13,6 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getImages());
+    dispatch(getSaved());
   }, []);
 
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -58,6 +59,7 @@ const Home = () => {
               alt={photo.alt_description}
               photo={photo.urls.regular}
               description={photo.description}
+              id={photo.id}
             />
           ))}
       </div>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./About.module.css";
 import { FaLinkedin } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={style.container}>
       <div className={style.about}>

@@ -1,23 +1,57 @@
-.conteinerCard {
-}
-
 .card {
   width: 100%;
   height: auto;
-  /* border: 1px solid #252525; */
+  position: relative;
 }
 .img {
   width: 100%;
   max-width: 100%;
-  height: 24em; /* o cualquier altura que desees */
-  object-fit: contain;
+  height: 24em;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.button {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #042335;
+  transition: all 0.5s;
+}
+.button:hover {
+  color: #042335d7;
+}
+
+.zoomed:hover {
+  cursor: zoom-out;
+}
+.zoomed {
+  width: auto;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9998;
 }
 
 @media (max-width: 391px) {
   .img {
     width: 95%;
     max-width: 100%;
-    height: 20em; /* o cualquier altura que desees */
+    height: 20em;
     object-fit: contain;
   }
   .card {

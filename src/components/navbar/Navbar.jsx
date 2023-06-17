@@ -3,6 +3,7 @@ import img from "../../helper/logo.png";
 import style from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import Search from "../search/Search";
+import { FaBookmark } from "react-icons/fa";
 
 const Navbar = () => {
   const location = useLocation();
@@ -39,6 +40,14 @@ const Navbar = () => {
             }`}
           >
             About
+          </Link>
+          <Link
+            to="/saved"
+            className={`${style.link} ${
+              window.location.pathname === "/saved" && style["link-active"]
+            }`}
+          >
+            <FaBookmark />
           </Link>
         </div>
       </div>
