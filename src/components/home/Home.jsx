@@ -56,7 +56,7 @@ const Home = () => {
             <Card
               key={photo.id}
               alt={photo.alt_description}
-              photo={photo.urls.small}
+              photo={photo.urls.regular}
               description={photo.description}
             />
           ))}
