@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-hot-toast";
 export const GET_SAVED = "GET_SAVED";
 export const SET_SAVED = "SET_SAVED";
 export const GET_IMAGES = "GET_IMAGES";
@@ -47,9 +48,10 @@ export const addToSaved = (obj) => {
   let imagesItems = JSON.parse(localStorage.getItem("saved")) || [];
   const existingItem = imagesItems.find((item) => item.id === obj.id);
   if (existingItem) {
-    alert("lo tenes");
+    toast.error("Error: Item already saved as a favorite.");
   } else {
     imagesItems.push(obj);
+    toast.success("Item successfully added to favorites!");
   }
   localStorage.setItem("saved", JSON.stringify(imagesItems));
   return {
