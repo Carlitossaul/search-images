@@ -6,13 +6,16 @@ import style from "./Home.module.css";
 import FilterBotons from "../filterBotons/FilterBotons";
 import Hashtag from "../hashtag/Hashtag";
 import { FaAngleDoubleUp } from "react-icons/fa";
+import Loading from "../loading/Loading";
 
 const Home = () => {
   const dispatch = useDispatch();
   const images = useSelector((state) => state.images);
 
   useEffect(() => {
-    dispatch(getImages());
+    setTimeout(() => {
+      dispatch(getImages());
+    }, 3000);
     dispatch(getSaved());
   }, []);
 
@@ -51,18 +54,25 @@ const Home = () => {
       <div className={style.endpoints}>
         <FilterBotons />
       </div>
-      <div className={style.conteinerCard}>
-        {images &&
-          images.map((photo) => (
-            <Card
-              key={photo.id}
-              alt={photo.alt_description}
-              photo={photo.urls.regular}
-              description={photo.description}
-              id={photo.id}
-            />
-          ))}
-      </div>
+      {images.length > 0 ? (
+        <div className={style.conteinerCard}>
+          {images &&
+            images.map((photo) => (
+              <Card
+                key={photo.id}
+                alt={photo.alt_description}
+                photo={photo.urls.regular}
+                description={photo.description}
+                id={photo.id}
+              />
+            ))}
+        </div>
+      ) : (
+        <>
+          {" "}
+          <Loading />{" "}
+        </>
+      )}
       {showScrollButton && (
         <button className={style.scrollToTopButton} onClick={handleScrollToTop}>
           <FaAngleDoubleUp />

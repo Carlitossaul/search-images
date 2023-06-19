@@ -14,7 +14,7 @@
   transition: opacity 0.7s ease;
 }
 .img:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .buttonSaved {

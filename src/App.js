@@ -5,6 +5,7 @@ import About from "./components/about/About.jsx";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Landing from "./components/landing/Landing.jsx";
 import { Saved } from "./components/saved/Saved.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 const App = () => {
   const location = useLocation();
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/saved" element={<Saved />} />
       </Routes>
+      <Footer />
     </>
   );
 };

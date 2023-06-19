@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  height: 2em;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+.container p {
+  color: #fff;
+  font-weight: 600;
+}
+.Navlink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.iconos {
+  font-size: 18px;
+}
