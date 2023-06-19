@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
+import { TfiDownload } from "react-icons/tfi";
 
 const Card = ({ alt, photo, id }) => {
   const dispatch = useDispatch();
@@ -79,6 +80,20 @@ const Card = ({ alt, photo, id }) => {
     window.open(shareUrl, "_blank");
   };
 
+  const handleDownload = async (photo) => {
+    try {
+      const response = await fetch(photo);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "image.jpg";
+      link.click();
+    } catch (error) {
+      console.error("Error during download:", error);
+    }
+  };
+
   return (
     <div className={styles.containerCard}>
       <div
@@ -113,6 +128,15 @@ const Card = ({ alt, photo, id }) => {
             </button>
           )}
         </div>
+        <button
+          className={`${styles.buttonDownload} ${
+            isHovered ? "" : styles.hidden
+          }`}
+          onClick={() => handleDownload(photo)}
+        >
+          <TfiDownload />
+        </button>
+
         <div
           className={`${styles.divButtonsRed} ${
             isHovered ? "" : styles.hidden

@@ -14,7 +14,7 @@
   transition: opacity 0.7s ease;
 }
 .img:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .buttonSaved {
@@ -33,13 +33,25 @@
   bottom: 5px;
   right: 5px;
 }
+.buttonDownload {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
 
 .buttonRed {
   background-color: transparent;
   border: none;
   font-size: 20px;
-  color: #ddd;
-  transition: all 1s ease;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.buttonRed:hover {
+  color: #b9b6b6;
 }
 
 .zoomed:hover {
