@@ -27,7 +27,7 @@ export const getImages = () => {
 export const searchImages = (searchTerm) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `https://api.unsplash.com/search/photos?query=${searchTerm}&client_id=${keyPub}&per_page=30`
+      `https://api.unsplash.com/search/photos?query=${searchTerm}&client_id=${keyPub}&per_page=28`
     );
     dispatch({
       type: SEARCH_IMAGES,

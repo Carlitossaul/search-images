@@ -3,7 +3,7 @@ import Card from "../card/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { getImages, getSaved } from "../../redux/actions";
 import style from "./Home.module.css";
-import Endpoints from "../endpoints/Enpoints";
+import FilterBotons from "../filterBotons/FilterBotons";
 import Hashtag from "../hashtag/Hashtag";
 import { FaAngleDoubleUp } from "react-icons/fa";
 
@@ -49,7 +49,7 @@ const Home = () => {
         <Hashtag />
       </div>
       <div className={style.endpoints}>
-        <Endpoints />
+        <FilterBotons />
       </div>
       <div className={style.conteinerCard}>
         {images &&

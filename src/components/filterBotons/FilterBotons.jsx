@@ -2,9 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchImages } from "../../redux/actions";
-import style from "./Enpoints.module.css";
+import style from "./FilterBotons.module.css";
 
-const Endpoints = () => {
+const FilterBotons = () => {
   const dispatch = useDispatch();
   const [selectedTag, setSelectedTag] = useState("");
 
@@ -52,4 +52,4 @@ const Endpoints = () => {
   );
 };
 
-export default Endpoints;
+export default FilterBotons;
