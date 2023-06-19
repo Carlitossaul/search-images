@@ -13,9 +13,10 @@ const Home = () => {
   const images = useSelector((state) => state.images);
 
   useEffect(() => {
-    setTimeout(() => {
+    if (!images.length) {
       dispatch(getImages());
-    }, 3000);
+    }
+
     dispatch(getSaved());
   }, []);
 
