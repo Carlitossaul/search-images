@@ -60,10 +60,16 @@
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
+  .conteinerCard {
+    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas de hasta 768px */
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   /* Estilos para pantallas con ancho entre 768px y 992px */
+  .conteinerCard {
+    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas de hasta 768px */
+  }
 }
 
 @media (min-width: 992px) {
